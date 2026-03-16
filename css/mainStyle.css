@@ -1,0 +1,317 @@
+/*
+  NOTE: This CSS file is intentionally placed in a non-standard folder name.
+  The assessment expects students to reorganize into a clean structure (e.g., css/styles.css)
+  and fix all related paths.
+*/
+
+@font-face {
+    font-family: 'San Francisco'; /*I love San Francisco*/
+    src: url('../assets/fonts/SF-Pro.ttf');
+}
+
+:root {
+  --bg: #fafafa;
+  --card-bg: #fff;
+  --text: #333;
+  --muted: #555;
+  --border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-header,
+.site-footer {
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.hero-image,
+.profile-image {
+  display: block;
+  margin-top: 12px;
+  max-width: 100%;
+  height: auto;
+  border: 1px dashed #aaa;
+  border-radius: 10px;
+}
+
+.contact-form {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.field-input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.btn {
+  justify-self: start;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Portfolio-style homepage layout */
+
+.hero {
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+.hero-kicker {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.hero-text {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #fff;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px dashed #aaa;
+  border-radius: 10px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 800px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+.project-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.project-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.apple-container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: "San Francisco", sans-serif;
+}
+
+.apple-device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    line-height: 0;
+    gap: 12px;
+    padding-bottom: 4rem;
+}
+
+.apple-device-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    color: black;
+    background-color: #f1f1f1;
+    line-height: 0;
+    gap: 12px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+
+.apple-device p,
+.apple-device-light p{
+    margin: 0;
+    padding-bottom: 16px;
+}
+
+.apple-tags {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 8px;
+    padding: 0;
+}
+
+.apple-tag,
+.apple-tag-light {
+    border: 1px solid white;
+    padding: 12px;
+    border-radius: 13px;
+}
+.apple-tag-light {
+    border-color: black;
+}
+
+.apple-tag a,
+.apple-tag-light a,
+.apple-tag-light a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.apple-tag-light a:hover {
+    color: blue;
+}
+
+
+.apple-body {
+    background-color: black;
+}
+
+.apple-device-dual {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.apple-device-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+    margin: 0 auto;
+    padding: 12px;
+    flex: 1;
+    color: black;
+
+}
+
